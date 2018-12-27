@@ -36,8 +36,12 @@ set ignorecase
 set hlsearch " highlight result
 
 " [ code reading ]
+" <cscope>
+" generate database: cscope -Rbqk
 " auto load cscope database
-" cscope -Rbqk
 if filereadable("cscope.out")
   cs add cscope.out 
 endif
+" use cscope to find definition rather than ctags
+map <C-]> :cs find g <C-R>=expand("<cword>")<CR><CR>
+map c<C-]> :cs find c <C-R>=expand("<cword>")<CR><CR>
