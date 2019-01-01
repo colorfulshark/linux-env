@@ -7,6 +7,7 @@ set nocompatible
 let mapleader=";" " prefix
 
 " [ filetype detection ]
+syntax on
 filetype on
 filetype plugin on
 filetype indent on
