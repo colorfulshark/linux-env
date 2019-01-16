@@ -41,8 +41,9 @@ set hlsearch " highlight result
 " generate database: cscope -Rbqk
 " auto load cscope database
 if filereadable("cscope.out")
+  set nocscopeverbose
   cs add cscope.out 
+  " use cscope to find definition rather than ctags
+  map <C-]> :cs find g <C-R>=expand("<cword>")<CR><CR>
+  map c<C-]> :cs find c <C-R>=expand("<cword>")<CR><CR>
 endif
-" use cscope to find definition rather than ctags
-map <C-]> :cs find g <C-R>=expand("<cword>")<CR><CR>
-map c<C-]> :cs find c <C-R>=expand("<cword>")<CR><CR>
