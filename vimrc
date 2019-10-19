@@ -22,10 +22,9 @@ set nowrap
 set wildmenu " command line autocomplete in vim
 
 " [ edit ]
-set expandtab " convert tab to space
 set tabstop=8 " 1 tab takes up 8 space while editing
 set shiftwidth=8 " 1 tab takes up 8 space while formating
-set softtabstop=8 " regard 4 continue space as a tab
+set softtabstop=8 " regard 8 continue space as a tab
 " auto save current position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
