@@ -294,6 +294,7 @@ tmux_conf_copy_to_os_clipboard=false
 
 # move status line to top
 #set -g status-position top
+setw -g mode-keys vi
 bind f run 'cut -c3- ~/.tmux.conf | sh -s _maximize_pane "#{session_name}" #D'
 unbind C-h
 unbind C-l
