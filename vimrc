@@ -71,3 +71,4 @@ let g:tagbar_compact=1
 nmap tg :TagbarToggle<CR>
 autocmd VimEnter * nested :call tagbar#autoopen(1)
 highlight TagbarHighlight ctermfg=Green
+highlight Search ctermfg=black ctermbg=yellow
