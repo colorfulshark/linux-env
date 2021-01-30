@@ -1,5 +1,8 @@
 #/bin/bash
 
+# install bash config file
+cp inputrc ~/.inputrc
+
 # install tmux and config files
 sudo apt install -y tmux
 cp tmux.conf ~/.tmux.conf
